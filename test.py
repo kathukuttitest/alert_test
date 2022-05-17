@@ -25,3 +25,9 @@ if last_row.Volume >= 2500:
       'caption' : f"<b>BTC/USDT - Hight Volume Alert (15m)</b> \n\n Volume - {last_row.Volume} \n\n @cryptoguruakacg"
   }
   requests.post(bot_url,json=file)
+else:
+  bot_url = "https://api.telegram.org/bot5308554635:AAHXPltt3MUI3XRfLME-rQDYoRILrsmuqKs/sendMessage?chat_id=-1001595590550&parse_mode=HTML&"
+  file = {
+     'text' : f'not much volume in btc {last_row.Volume}'
+  }
+  requests.post(bot_url,json=file)
